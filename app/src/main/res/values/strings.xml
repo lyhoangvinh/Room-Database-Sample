@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestRoomDB2</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+
+    <string name="warn_access_grant">Please grant access permissions!</string>
+    <string name="select_image">Select image</string>
+    <string name="toast_cannot_retrieve_selected_image">Cannot retrieve selected image</string>
+    <string name="toast_cannot_retrieve_cropped_image">Cannot retrieve cropped image</string>
+    <string name="toast_unexpected_error">Unexpected error</string>
+</resources>
