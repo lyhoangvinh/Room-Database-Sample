@@ -6,7 +6,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -44,6 +46,9 @@ public class MainActivity extends ActivityManagePermission implements UserView {
     @BindView(R.id.rcv)
     RecyclerView rcv;
 
+    @BindView(R.id.refresh)
+    SwipeRefreshLayout refresh;
+
     private UserAdapter adapter;
     private List<User> userList;
     private Uri resultUri;
@@ -76,6 +81,13 @@ public class MainActivity extends ActivityManagePermission implements UserView {
         rcv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rcv.setAdapter(adapter);
         presenter.getAddData();
+
+        refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                presenter.getAddData();
+            }
+        });
     }
 
     private void showAlertDialog(final User user) {
@@ -269,11 +281,20 @@ public class MainActivity extends ActivityManagePermission implements UserView {
 
     @Override
     public void showLoading() {
-
+        if (refresh != null) {
+            refresh.setRefreshing(true);
+        }
     }
 
     @Override
     public void hideLoading() {
-
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (refresh != null) {
+                    refresh.setRefreshing(false);
+                }
+            }
+        }, 1000);
     }
 }

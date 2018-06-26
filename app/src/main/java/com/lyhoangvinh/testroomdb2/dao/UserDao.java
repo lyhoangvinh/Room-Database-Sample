@@ -10,8 +10,25 @@ import com.lyhoangvinh.testroomdb2.model.User;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
+import io.reactivex.Maybe;
+import io.reactivex.Single;
+
 @Dao
 public interface UserDao {
+
+    @Query("SELECT * FROM user")
+    Flowable<List<User>> getAllUserFlowable();
+
+    @Query("SELECT * FROM user")
+    Single<List<User>> getAllUserSingle();
+
+    @Query("SELECT * FROM user WHERE age = :ageIn ")
+    Maybe<User> getUserByAgeMayBe(String ageIn);
+
+    @Query("SELECT * FROM user LIMIT 1")
+    Single<User> getOneUserSingle();
+
     @Query("SELECT * FROM user")
     List<User> getAll();
 
