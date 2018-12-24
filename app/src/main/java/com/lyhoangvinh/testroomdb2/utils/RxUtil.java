@@ -43,7 +43,7 @@ public class RxUtil {
         });
     }
 
-    public static <T> Disposable makeRequstSingle(
+    public static <T> Disposable makeRequestSingle(
             Single<T> request, boolean shouldUpdateUi,
             @NonNull final OnResponseListener<T> responseConsumer,
             @Nullable final Action onComplete) {
