@@ -93,7 +93,7 @@ public class BasePresenter<V extends BaseView> implements Destroyable {
             getView().showLoading();
         }
 
-        Disposable disposable = RxUtil.makeRequstSingle(request, shouldUpdateUI, new OnResponseListener<T>() {
+        Disposable disposable = RxUtil.makeRequestSingle(request, shouldUpdateUI, new OnResponseListener<T>() {
             @Override
             public void onRespond(@NonNull T t) {
                 if (responseConsumer != null && (forceResponseWithoutCheckNullView || getView() != null)) {
