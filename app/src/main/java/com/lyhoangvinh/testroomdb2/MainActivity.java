@@ -297,4 +297,12 @@ public class MainActivity extends ActivityManagePermission implements UserView {
             }
         }, 1000);
     }
+
+    /* // liveData : https://proandroiddev.com/android-room-handling-relations-using-livedata-2d892e40bd53
+     private LiveData<List<Notes>> getAllNoteLive() {
+        LiveData<List<Notes>> statesLiveData = getDatabaseManager().getNoteDao().getAllNoteLive();
+        statesLiveData = Transformations.map(statesLiveData, input -> input);
+        return statesLiveData;
+    }
+     */
 }
