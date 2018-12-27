@@ -5,4 +5,4 @@ Room Rxjava example shows how to fetch data as observable from database using ro
 Room, RxJava2.
 
 # Links
-I learned a lot from this article https://medium.com/google-developers/room-rxjava-acb0cd4f3757
+I learned a lot from this article https://medium.com/google-developers/room-rxjava-acb0cd4f3757 and https://proandroiddev.com/android-room-handling-relations-using-livedata-2d892e40bd53
