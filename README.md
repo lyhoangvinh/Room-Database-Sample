@@ -53,6 +53,15 @@ We handle this kind of operations with Transformations class and its two static 
 # Libraries
 Room, RxJava2.
 
+# App
+Project development follow Advance MVVM Template with Dagger 2, RxAndroid, Room, LiveData and Unit Testing.
+
+Sample app:
+
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+      alt="Download from Google Play"
+      height="80">](https://play.google.com/store/apps/details?id=com.lyhoangvinh.dailydiaries)
+
 # Links
 I learned a lot from this article:
  
