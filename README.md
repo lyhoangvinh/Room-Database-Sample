@@ -63,6 +63,7 @@ Sample app:
       height="80">](https://play.google.com/store/apps/details?id=com.lyhoangvinh.dailydiaries)
 
 # Links
+ https://github.com/lyhoangvinh/LiveDataMVP
 I learned a lot from this article:
  
  https://medium.com/google-developers/room-rxjava-acb0cd4f3757
