@@ -64,7 +64,8 @@ Sample app:
 
 # Links
  https://github.com/lyhoangvinh/LiveDataMVP
-I learned a lot from this article:
+ 
+ I learned a lot from this article:
  
  https://medium.com/google-developers/room-rxjava-acb0cd4f3757
  
